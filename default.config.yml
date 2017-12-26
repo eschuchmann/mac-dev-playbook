@@ -6,70 +6,63 @@ configure_sudoers: yes
 configure_terminal: yes
 configure_osx: yes
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo: https://github.com/eschuchmann/dotfiles.git
 dotfiles_repo_accept_hostkey: yes
 dotfiles_repo_local_destination: ~/Dropbox/Development/GitHub/dotfiles
 dotfiles_files:
   - .bash_profile
   - .gitignore
+  - .gitconfig
   - .inputrc
   - .osx
   - .vimrc
 
 homebrew_installed_packages:
-  # - ansible # Installed via Pip.
-  - autoconf
   - bash-completion
-  - chromedriver
-  - doxygen
-  - gettext
-  - gifsicle
   - git
-  - go
   - gpg
   - hub
   - httpie
   - iperf
-  - libevent
   - sqlite
   - mcrypt
   - nmap
   - node
   - nvm
-  - ssh-copy-id
-  - cowsay
   - readline
   - openssl
   - pv
   - wget
-  - wrk
+  - awscli
 
 homebrew_taps:
   - homebrew/core
   - caskroom/cask
-  - homebrew/php
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - docker
   - dropbox
-  # - fing # Download link keeps getting changed, d'oh!
-  - firefox
   - google-chrome
-  - handbrake
-  - licecap
-  - limechat
-  - macvim
   - sequel-pro
   - skitch
   - slack
-  - sublime-text
-  - transmit
   - vagrant
-  - virtualbox
+#  - virtualbox
+  - iterm2
+  - visual-studio-code
+  - spotify
+  - postman
+#  - https://raw.githubusercontent.com/caskroom/homebrew-cask/3a68e11fa578e36fe4745d761a6082b0b158391b/Casks/istat-menus.rb
 
 # See `geerlingguy.mas` role documentation for usage instructions.
-mas_installed_apps: []
+mas_installed_apps:
+  - 803453959 # slack
+  - 918217753 # wickr
+  - 585829637 # todoist
+  - 419330170 # moom
+  - 937984704 # amphetamine
+  - 403388562 # transmit 
 mas_email: ""
 mas_password: ""
 
