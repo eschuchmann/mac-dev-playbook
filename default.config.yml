@@ -38,6 +38,7 @@ homebrew_installed_packages:
 homebrew_taps:
   - homebrew/core
   - caskroom/cask
+  - caskroom/versions
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -53,7 +54,10 @@ homebrew_cask_apps:
   - visual-studio-code
   - spotify
   - postman
+  - flycut
 #  - https://raw.githubusercontent.com/caskroom/homebrew-cask/3a68e11fa578e36fe4745d761a6082b0b158391b/Casks/istat-menus.rb
+  - java8
+  - intellij-idea-ce
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
@@ -63,6 +67,7 @@ mas_installed_apps:
   - 419330170 # moom
   - 937984704 # amphetamine
   - 403388562 # transmit 
+  - 585829637 # todoist
 mas_email: ""
 mas_password: ""
 
