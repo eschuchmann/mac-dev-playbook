@@ -53,6 +53,7 @@ homebrew_cask_apps:
   - iterm2
   - visual-studio-code
   - spotify
+  - spotify-notifications
   - postman
   - flycut
 #  - https://raw.githubusercontent.com/caskroom/homebrew-cask/3a68e11fa578e36fe4745d761a6082b0b158391b/Casks/istat-menus.rb
