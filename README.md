@@ -16,10 +16,12 @@ This is a work in progress, and is mostly a means for me to document my current 
   - [MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks) (the original inspiration for this project)
 
 ## Installation
-
+  
+  1. create a staging folder `mkdir setup; cd setup`
+  1. Clone this repository to your local drive. `git clone git@github.com:eschuchmann/mac-dev-playbook.git`
   1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
-  2. [Install Ansible](http://docs.ansible.com/intro_installation.html).
-  3. Clone this repository to your local drive.
+  1. install pip: `sudo easy_install pip`
+  1. install ansible `sudo pip install ansible`
   4. Run `$ ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
   5. Run `ansible-playbook main.yml -i inventory --ask-become-pass` inside this directory. Enter your account password when prompted.
 

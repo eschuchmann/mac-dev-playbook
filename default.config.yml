@@ -12,51 +12,81 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
+dotfiles_repo: https://github.com/eschuchmann/dotfiles.git
+dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_local_destination: ~/setup/dotfiles
 dotfiles_files:
-  - .zshrc
-  - .gitignore
+  - .bash_profile
   - .gitconfig
   - .inputrc
+  - .ojo_profile
   - .osx
   - .vimrc
 
 homebrew_installed_packages:
+  - autojump
+  - awk
+  - awscli
   - bash-completion
+  - coreutils
+  - evans
+  - gettext
   - git
-  - gpg
+  - gnupg
   - httpie
+  - hugo
   - iperf
-  - sqlite
   - jq
+  - kubernetes-cli
   - mas
+  - maven
   - mcrypt
   - nmap
   - node
   - nvm
-  - readline
   - openssl
   - pv
+  - pyenv
+  - readline
+  - sbt
+  - sops
+  - sqlite
+  - stern
+  - terraform
+  - terraform-docs
+  - terragrunt
+  - tree
+  - watch
   - wget
-  - awscli
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - ktr0731/evans
+  - adoptopenjdk/openjdk
+  - sre/tools
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - chromedriver
+  - adoptopenjdk15
+  - aerial
   - docker
   - dropbox
-  - google-chrome
-  - slack
-  - aerial
-  - iterm2
-  - visual-studio-code
-  - spotify
-  - postman
   - flycut
+  - google-chrome
+  - google-cloud-sdk
   - intellij-idea-ce
+  - iterm2
+  - ngrok
+  - nvalt
+  - postico
+  - postman
+  - rectangle
+  - skitch
+  - slack
+  - spotify
+  - tunnelblick
+  - visual-studio-code
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
@@ -66,7 +96,7 @@ mas_installed_apps:
 #  - 419330170 # moom
   - 937984704 # amphetamine
 #  - 403388562 # transmit 
-mas_email: ""
+mas_email: "erik.schuchmann@mezzasphere.com"
 mas_password: ""
 
 osx_script: "~/.osx --no-restart"
@@ -86,7 +116,8 @@ npm_packages: []
   # - name: webpack
   #   state: present # present/absent/latest, default: present
   #   version: "^2.6" # default: N/A
-pip_packages: []
+pip_packages:
+  - pipenv
   # - name: mkdocs
   #   state: present # present/absent/latest, default: present
   #   version: "0.16.3" # default: N/A
