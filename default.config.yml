@@ -25,6 +25,7 @@ homebrew_installed_packages:
   - httpie
   - iperf
   - sqlite
+  - jq
   - mas
   - mcrypt
   - nmap
