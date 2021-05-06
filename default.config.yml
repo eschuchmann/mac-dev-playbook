@@ -2,15 +2,18 @@
 downloads: ~/.ansible-downloads/
 
 configure_dotfiles: yes
-configure_sudoers: yes
 configure_terminal: yes
 configure_osx: yes
 
-dotfiles_repo: https://github.com/eschuchmann/dotfiles.git
-dotfiles_repo_accept_hostkey: yes
-dotfiles_repo_local_destination: ~/dotfiles
+configure_sudoers: no
+sudoers_custom_config: ''
+# Example:
+# sudoers_custom_config: |
+#   # Allow users in admin group to use sudo with no password.
+#   %admin ALL=(ALL) NOPASSWD: ALL
+
 dotfiles_files:
-  - .bash_profile
+  - .zshrc
   - .gitignore
   - .gitconfig
   - .inputrc
@@ -21,7 +24,6 @@ homebrew_installed_packages:
   - bash-completion
   - git
   - gpg
-  - hub
   - httpie
   - iperf
   - sqlite
@@ -40,38 +42,30 @@ homebrew_installed_packages:
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
-  - homebrew/cask-versions
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - chromedriver
   - docker
   - dropbox
   - google-chrome
-  - sequel-pro
-  - skitch
   - slack
-  - vagrant
-#  - virtualbox
   - aerial
   - iterm2
   - visual-studio-code
   - spotify
-  - spotify-notifications
   - postman
   - flycut
-# - https://raw.githubusercontent.com/caskroom/homebrew-cask/3a68e11fa578e36fe4745d761a6082b0b158391b/Casks/istat-menus.rb
-  - java8
   - intellij-idea-ce
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
-  - 803453959 # slack
-  - 918217753 # wickr
+#  - 803453959 # slack
+#  - 918217753 # wickr
   - 585829637 # todoist
-  - 419330170 # moom
+#  - 419330170 # moom
   - 937984704 # amphetamine
-  - 403388562 # transmit 
-  - 585829637 # todoist
+#  - 403388562 # transmit 
 mas_email: ""
 mas_password: ""
 
